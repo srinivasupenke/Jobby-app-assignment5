@@ -1,0 +1,308 @@
+.jobs-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 22px;
+  margin: auto;
+  min-height: 90vh;
+  background-color: #000000;
+  font-family: 'Roboto';
+  width: 100vw;
+}
+
+.jobs-content {
+  display: flex;
+  flex-direction: column;
+  width: 92%;
+}
+@media screen and (min-width: 768px) {
+  .jobs-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 100px;
+    width: 92%;
+  }
+}
+.jobs-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 0px;
+  margin: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .all-jobs-container {
+    width: 100%;
+  }
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .loader-container {
+    width: 100%;
+  }
+}
+.jobs-error-view-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 48px;
+  padding-bottom: 64px;
+  flex-grow: 1;
+}
+@media screen and (min-width: 768px) {
+  .jobs-error-view-container {
+    width: 70%;
+    width: 100%;
+    margin-top: 70px;
+    padding-bottom: 0px;
+  }
+}
+.jobs-failure-img {
+  width: 250px;
+  height: 200px;
+}
+@media screen and (min-width: 768px) {
+  .jobs-failure-img {
+    width: 400px;
+    height: 350px;
+  }
+}
+.jobs-failure-heading-text {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .jobs-failure-heading-text {
+    font-size: 30px;
+  }
+}
+.jobs-failure-description {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  width: 90%;
+  max-width: 388px;
+  margin-top: 0px;
+}
+@media screen and (min-width: 768px) {
+  .jobs-failure-description {
+    font-size: 16px;
+  }
+}
+.jobs-failure-button {
+  padding: 8px 32px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #4f46e5;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: 'Roboto';
+}
+.no-jobs-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 64px;
+  margin-top: 48px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-jobs-view {
+    margin-left: 30px;
+    width: 100%;
+    padding-bottom: 0;
+    margin-top: 0px;
+  }
+}
+
+.no-jobs-img {
+  width: 250px;
+  height: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-jobs-img {
+    width: 459px;
+    height: 315px;
+  }
+}
+
+.no-jobs-heading {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.3px;
+  width: 90%;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .no-jobs-heading {
+    margin-top: 32px;
+    font-size: 42px;
+  }
+}
+
+.no-jobs-description {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-size: 12px;
+  width: 90%;
+  max-width: 288px;
+  line-height: 1.3;
+}
+
+@media screen and (min-width: 768px) {
+  .no-jobs-description {
+    margin-top: 12px;
+    font-size: 14px;
+    width: 60%;
+    max-width: 466px;
+  }
+}
+
+.employment-type-container {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.employment-type-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+.employment-type-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.employment-type-list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 22px;
+  margin: 0px;
+  padding: 0px;
+}
+.checkbox {
+  height: 14px;
+  width: 14px;
+}
+
+.label-name {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: 'Roboto';
+}
+.salary-range-container {
+  margin-top: 22px;
+  margin-bottom: 22px;
+}
+
+.salary-range-heading {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: 'Roboto';
+}
+.salary-range-list-container {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 22px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.salary-range-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.radio-input {
+  height: 14px;
+  width: 14px;
+}
+
+.search-input-container-desktop {
+  display: flex;
+  border: 1px solid #475569;
+  justify-content: space-between;
+  align-self: flex-start;
+  border-radius: 3px;
+  width: 50%;
+  margin-bottom: 22px;
+}
+
+.input-search {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  height: 30px;
+  width: 100%;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.search-icon-button {
+  background-color: #202020;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
+  border: 1px solid #475569;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-icon {
+  color: #ffffff;
+  height: 15px;
+  width: 15px;
+}
+@media screen and (max-width: 768px) {
+  .search-input-container-desktop {
+    display: none;
+  }
+}
+
+.search-input-jobs-list-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .search-input-jobs-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    margin-left: 40px;
+    margin-top: 28px;
+  }
+}
