@@ -29,9 +29,11 @@ class ProfileCard extends Component {
       method: 'GET',
     }
     const response = await fetch(apiUrl, options)
+    console.log('profile response fetched')
 
     if (response.ok === true) {
       const data = await response.json()
+      console.log('Response is ok data converted into Json')
 
       const profileData = {
         name: data.profile_details.name,
@@ -39,13 +41,16 @@ class ProfileCard extends Component {
         shortBio: data.profile_details.short_bio,
       }
       this.setState({apiStatus: apiStatusConstants.success, profileData})
+      console.log('fetching profiledata successfull')
     } else {
       this.setState({apiStatus: apiStatusConstants.failure})
+      console.log('fetching profiledata failure')
     }
   }
 
   renderProfileView = () => {
     const {profileData} = this.state
+
     const {name, profileImageUrl, shortBio} = profileData
     return (
       <div className="profile-success-container">

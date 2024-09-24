@@ -9,8 +9,10 @@ import './index.css'
 const Header = props => {
   const onClickLogout = () => {
     Cookies.remove('jwt_token')
+    console.log('Remove jwtToken')
     const {history} = props
     history.replace('/login')
+    console.log('replace to login route')
   }
   return (
     <nav className="nav-header">

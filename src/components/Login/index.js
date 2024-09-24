@@ -1,6 +1,9 @@
 import {Component} from 'react'
+
 import Cookies from 'js-cookie'
+
 import {Redirect} from 'react-router-dom'
+
 import './index.css'
 
 class Login extends Component {
@@ -52,13 +55,14 @@ class Login extends Component {
 
   onSubmitFailure = errorMsg => {
     this.setState({errorMsg, showSubmitError: true})
+    console.log('Login Failure')
   }
 
   loginSuccess = jwtToken => {
     const {history} = this.props
     Cookies.set('jwt_token', jwtToken, {expires: 30})
     history.replace('/')
-    console.log('login success')
+    console.log('login Success')
   }
 
   onSubmitForm = async event => {

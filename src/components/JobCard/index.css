@@ -87,8 +87,9 @@
 }
 .package-heading {
   color: #ffffff;
-  font-size: 12px;
   font-family: 'Roboto';
+  margin: 0px;
+  font-size: 12px;
 }
 
 .employee-type-container {

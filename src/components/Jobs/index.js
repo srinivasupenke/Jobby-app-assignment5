@@ -1,17 +1,21 @@
 import {Component} from 'react'
+
 import Loader from 'react-loader-spinner'
 
 import {FaSearch} from 'react-icons/fa'
 
 import Cookies from 'js-cookie'
+
 import Header from '../Header'
 
 import FilterGroup from '../FilterGroup'
+
 import JobCard from '../JobCard'
 
 import './index.css'
 
 // These are the lists used in the application. You can move them to any component needed.
+
 const employmentTypesList = [
   {
     label: 'Full Time',
@@ -60,7 +64,6 @@ const apiStatusConstants = {
 class Jobs extends Component {
   state = {
     jobsList: [],
-
     apiStatus: apiStatusConstants.initial,
     employmentType: [],
     minimumSalary: 0,
@@ -74,6 +77,7 @@ class Jobs extends Component {
   getJobs = async () => {
     this.setState({apiStatus: apiStatusConstants.in_progress})
     const {employmentType, minimumSalary, searchInput} = this.state
+
     const jobsApi = `https://apis.ccbp.in/jobs?employment_type=${employmentType.join()}&minimum_package=${minimumSalary}&search=${searchInput}`
 
     const jwtToken = Cookies.get('jwt_token')
@@ -98,6 +102,7 @@ class Jobs extends Component {
         rating: eachJob.rating,
         title: eachJob.title,
       }))
+      console.log(data, 'JobsList')
       this.setState({
         apiStatus: apiStatusConstants.success,
         jobsList: updatedData,
@@ -190,11 +195,32 @@ class Jobs extends Component {
     this.setState({minimumSalary: salary}, this.getJobs)
   }
 
-  changeEmployeeList = type =>
-    this.setState(
-      prev => ({employmentType: [...prev.employmentType, type]}),
-      this.getJobs,
-    )
+  changeEmployeeList = type => {
+    const {employmentType} = this.state
+    console.log(!employmentType.includes(type))
+    if (!employmentType.includes(type)) {
+      this.setState(
+        prev => ({employmentType: [...prev.employmentType, type]}),
+        this.getJobs,
+      )
+    } else {
+      const findIndexValue = employmentType.indexOf(type)
+      this.setState(prevState => {
+        // create a copy of the employmentType array
+
+        const newEmploymentType = [...prevState.employmentType]
+
+        // Remove the item at findIndexValue from the newEmploymentType array
+
+        newEmploymentType.splice(findIndexValue, 1)
+
+        // Return the updated state
+        return {
+          employmentType: newEmploymentType,
+        }
+      }, this.getJobs)
+    }
+  }
 
   render() {
     const {searchInput} = this.state

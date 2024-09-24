@@ -7,8 +7,6 @@ import NotFound from './components/NotFound'
 import ProtectedRoute from './components/ProtectedRoute'
 import './App.css'
 
-// Replace your code here
-
 const App = () => (
   <Switch>
     <Route exact path="/login" component={Login} />
