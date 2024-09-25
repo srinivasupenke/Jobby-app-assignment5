@@ -77,3 +77,6 @@
   width: 80px;
   cursor: pointer;
 }
+.logout-button:hover {
+  background: #6366f1;
+}

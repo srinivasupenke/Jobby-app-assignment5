@@ -89,7 +89,7 @@
   color: #ffffff;
   font-family: 'Roboto';
   margin: 0px;
-  font-size: 12px;
+  font-size: 14px !important;
 }
 
 .employee-type-container {
