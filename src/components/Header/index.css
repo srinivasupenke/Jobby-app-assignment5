@@ -64,6 +64,16 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-menu-items li {
+  padding-bottom: 4px;
+}
+
+.nav-menu-items.active li {
+  border-bottom: 2px solid #6366f1;
 }
 
 .logout-button {

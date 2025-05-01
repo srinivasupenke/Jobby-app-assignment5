@@ -3,7 +3,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 import {AiOutlineSearch} from 'react-icons/ai'
 import Header from '../Header'
-import JobItem from '../JobItem'
+import JobItem from '../JobCard'
 import './index.css'
 
 const employmentTypesList = [
@@ -333,7 +333,6 @@ class AllJobs extends Component {
   }
 
   render() {
-    // eslint-disable-next-line no-unused-vars
     const {checkboxInputs, radioInput, searchInput} = this.state
     return (
       <>
